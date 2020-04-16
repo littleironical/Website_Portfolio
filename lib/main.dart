@@ -19,6 +19,8 @@ class MyApp extends StatelessWidget {
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+  final width = MediaQuery.of(context).size.width;
+
     return ResponsiveWidget(
       largeScreen: Scaffold(
         drawer: ResponsiveWidget.isSmallScreen(context) ? Drawer(
@@ -31,7 +33,11 @@ class Body extends StatelessWidget {
               Text('Contacts'),
             ],
           ),
-        ) : null
+        ) : null,
+        body: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          padding: EdgeInsets.only(left: width*1/10, right: width*1/10),
+        ),
       ),
     );
   }
