@@ -20,7 +20,19 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveWidget(
-      largeScreen: ,
+      largeScreen: Scaffold(
+        drawer: ResponsiveWidget.isSmallScreen(context) ? Drawer(
+          child: ListView(
+            children: [
+              Text('Home'),
+              Text('About Me'),
+              Text('What I Work With'),
+              Text('Consultation Format'),
+              Text('Contacts'),
+            ],
+          ),
+        ) : null
+      ),
     );
   }
 }
