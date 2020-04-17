@@ -55,44 +55,89 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
           scrollDirection: Axis.vertical,
           padding: EdgeInsets.only(left: width*1/10, right: width*1/10),
           child: Container(
-            height: 40.0,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+            child: Column(
               children: <Widget>[
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text('Hayley Morgan',
-                      style: TextStyle(
-                        fontFamily: 'Montserrat',
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold
+                Container(
+                  height: 60.0,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text('Hayley Morgan',
+                            style: TextStyle(
+                              fontFamily: 'Montserrat',
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold
+                            ),
+                          ),
+                          Text('counseling psychologist',
+                            style: TextStyle(
+                              color: Colors.black45,
+                              fontSize: 12.0
+                            ),
+                          )
+                        ],
                       ),
-                    ),
-                    Text('counseling psychologist',
-                      style: TextStyle(
-                        color: Colors.black45,
-                        fontSize: 12.0
-                      ),
-                    )
-                  ],
+
+                      // ResponsiveWidget.isSmallScreen(context) ? SizedBox(width: 350.0) : 
+                      // SizedBox(width: MediaQuery.of(context).size.width / 2 - 350.0),
+
+                      // ResponsiveWidget.isSmallScreen(context) ?
+                      // Image.network('assets/menu.png', width: 25, height: 25.0) :
+                      Container(
+                        height: 40.0,
+                        width: 0.5*width,
+                        child: TabBar(
+                          controller: _tabController,
+                          indicatorColor: Colors.black,
+                          tabs: <Widget>[
+                            Tab(child: Text('Home',
+                              style: TextStyle(
+                                fontFamily: 'Montserrat',
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500
+                              ),
+                            ),),
+                            Tab(child: Text('About Me',
+                              style: TextStyle(
+                                fontFamily: 'Montserrat',
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500
+                              ),
+                            ),),
+                            Tab(child: Text('What I Work With',
+                              style: TextStyle(
+                                fontFamily: 'Montserrat',
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500
+                              ),
+                            ),),
+                            Tab(child: Text('Consultation Format',
+                              style: TextStyle(
+                                fontFamily: 'Montserrat',
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500
+                              ),
+                            ),),
+                            Tab(child: Text('Contacts',
+                              style: TextStyle(
+                                fontFamily: 'Montserrat',
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500
+                              ),
+                            ),),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
                 ),
-
-                // ResponsiveWidget.isSmallScreen(context) ? SizedBox(width: 350.0) : 
-                // SizedBox(width: MediaQuery.of(context).size.width / 2 - 350.0),
-
-                // ResponsiveWidget.isSmallScreen(context) ?
-                // Image.network('assets/menu.png', width: 25, height: 25.0) :
-                TabBar(
-                  controller: _tabController,
-                  indicatorColor: Colors.black,
-                  tabs: <Widget>[
-                    Tab(child: Text('Home'),),
-                    Tab(child: Text('About Me'),),
-                    Tab(child: Text('What I Work With'),),
-                    Tab(child: Text('Consultation Format'),),
-                    Tab(child: Text('Contacts'),),
+                Row(
+                  children: <Widget>[
+                    
                   ],
                 )
               ],
