@@ -35,6 +35,7 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
 
     return ResponsiveWidget(
       largeScreen: Scaffold(
+
         endDrawer: ResponsiveWidget.isSmallScreen(context) ? SizedBox(
           height: width*0.5,
           child: Drawer(
@@ -49,6 +50,7 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
             ),
           ),
         ) : null,
+
         body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           padding: EdgeInsets.only(left: width*1/10, right: width*1/10),
@@ -56,11 +58,11 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
             height: 40.0,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
+              children: <Widget>[
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: <Widget>[
                     Text('Hayley Morgan',
                       style: TextStyle(
                         fontFamily: 'Montserrat',
@@ -77,20 +79,20 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
                   ],
                 ),
 
-                ResponsiveWidget.isSmallScreen(context) ? SizedBox(width: 350.0) : 
-                SizedBox(width: MediaQuery.of(context).size.width / 2 - 350.0),
+                // ResponsiveWidget.isSmallScreen(context) ? SizedBox(width: 350.0) : 
+                // SizedBox(width: MediaQuery.of(context).size.width / 2 - 350.0),
 
-                ResponsiveWidget.isSmallScreen(context) ?
-                Image.network('assets/menu.png', width: 25, height: 25.0) :
+                // ResponsiveWidget.isSmallScreen(context) ?
+                // Image.network('assets/menu.png', width: 25, height: 25.0) :
                 TabBar(
                   controller: _tabController,
                   indicatorColor: Colors.black,
-                  tabs: [
+                  tabs: <Widget>[
                     Tab(child: Text('Home'),),
-                    Tab(child: Text('Home'),),
-                    Tab(child: Text('Home'),),
-                    Tab(child: Text('Home'),),
-                    Tab(child: Text('Home'),),
+                    Tab(child: Text('About Me'),),
+                    Tab(child: Text('What I Work With'),),
+                    Tab(child: Text('Consultation Format'),),
+                    Tab(child: Text('Contacts'),),
                   ],
                 )
               ],
