@@ -51,6 +51,8 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
           ),
         ) : null,
 
+        // TOP BAR OF THE WEBSITE...BELOW
+
         body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           // padding: EdgeInsets.only(left: width*1/10, right: width*1/10),
@@ -105,46 +107,11 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
                                 indicatorColor: Colors.black,
                                 indicatorSize: TabBarIndicatorSize.label,
                                 tabs: <Widget>[
-                                  Tab(child: Text('Home',
-                                    style: TextStyle(
-                                      fontFamily: 'Montserrat',
-                                      color: Colors.black,
-                                      fontSize: 12.0,
-                                      fontWeight: FontWeight.w600
-                                    ),
-                                  ),),
-                                  Tab(child: Text('About Me',
-                                    style: TextStyle(
-                                      fontFamily: 'Montserrat',
-                                      color: Colors.black,
-                                      fontSize: 12.0,
-                                      fontWeight: FontWeight.w600
-                                    ),
-                                  ),),
-                                  Tab(child: Text('What I Work With',
-                                    style: TextStyle(
-                                      fontFamily: 'Montserrat',
-                                      color: Colors.black,
-                                      fontSize: 12.0,
-                                      fontWeight: FontWeight.w600
-                                    ),
-                                  ),),
-                                  Tab(child: Text('Consultation Format',
-                                    style: TextStyle(
-                                      fontFamily: 'Montserrat',
-                                      color: Colors.black,
-                                      fontSize: 12.0,
-                                      fontWeight: FontWeight.w600
-                                    ),
-                                  ),),
-                                  Tab(child: Text('Contacts',
-                                    style: TextStyle(
-                                      fontFamily: 'Montserrat',
-                                      color: Colors.black,
-                                      fontSize: 12.0,
-                                      fontWeight: FontWeight.w600
-                                    ),
-                                  ),),
+                                  Tab(child: fortabs('Name'),),
+                                  Tab(child: fortabs('About Me'),),
+                                  Tab(child: fortabs('What I Work With'),),
+                                  Tab(child: fortabs('Consultation Format'),),
+                                  Tab(child: fortabs('Contacts'),),
                                 ],
                               ),
                               Container(
@@ -166,6 +133,9 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
                   ),
                 ),
                 Divider(indent: width*1/20, endIndent: width*1/20, color: Colors.black12, thickness: 1.0,),
+
+                // MAIN BODY OF THE WEBSITE...BELOW
+
                 Row(
                   children: <Widget>[
 
@@ -178,4 +148,15 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
       ),
     );
   }
+}
+
+Widget fortabs(String name){
+  return Text(name,
+    style: TextStyle(
+      fontFamily: 'Montserrat',
+      color: Colors.black,
+      fontSize: 12.0,
+      fontWeight: FontWeight.w600
+    ),
+  );
 }
