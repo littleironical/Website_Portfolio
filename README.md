@@ -6,4 +6,4 @@ https://dribbble.com/shots/6237312-Homepage-Concept-Dribbble-Invite
 
 ## Project Images
 
-<ing src = "ss1.png">
+<img src = "ss1.png">
