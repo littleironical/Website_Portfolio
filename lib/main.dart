@@ -73,7 +73,6 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
                           children: <Widget>[
                             Text('Hayley Morgan',
                               style: TextStyle(
-                                fontFamily: 'Montserrat',
                                 color: Colors.black,
                                 fontSize: 15.0,
                                 fontWeight: FontWeight.bold
@@ -107,21 +106,33 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
                                 indicatorColor: Colors.black,
                                 indicatorSize: TabBarIndicatorSize.label,
                                 tabs: <Widget>[
-                                  Tab(child: fortabs('Name'),),
-                                  Tab(child: fortabs('About Me'),),
-                                  Tab(child: fortabs('What I Work With'),),
-                                  Tab(child: fortabs('Consultation Format'),),
-                                  Tab(child: fortabs('Contacts'),),
+                                  Tab(child: textintabs('Name'),),
+                                  Tab(child: textintabs('About Me'),),
+                                  Tab(child: textintabs('What I Work With'),),
+                                  Tab(child: textintabs('Consultation Format'),),
+                                  Tab(child: textintabs('Contacts'),),
                                 ],
                               ),
                               Container(
-                                color: Colors.blue,
-                                width: 30.0,
-                                height: 40.0,
+                                width: 140.0,
+                                height: 35.0,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.all(Radius.circular(3.0)),
+                                  color: Color(0xFF3b5998)
+                                ),
                                 child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                   children: <Widget>[
-                                    Text('My Facebook'),
-                                    Icon(Icons.arrow_forward)
+                                    Text('My Facebook',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 13.0,
+                                      ),
+                                    ),
+                                    Icon(Icons.arrow_forward,
+                                      color: Colors.white,
+                                      size: 14.0,
+                                    )
                                   ],
                                 ),
                               ),
@@ -138,9 +149,19 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
 
                 Row(
                   children: <Widget>[
-
+                    Column(
+                      children: <Widget>[
+                        Column(
+                          children: <Widget>[
+                            Text('01 - HELLO'),
+                            Text('MY NAME\'S HARLEY MORGAN')
+                          ],
+                        ),
+                        Text('Tell about\nthe difficulties\nand find a solution.')
+                      ],
+                    ),
                   ],
-                )
+                ),
               ],
             ),
           ),
@@ -150,12 +171,11 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
   }
 }
 
-Widget fortabs(String name){
+Widget textintabs(String name){
   return Text(name,
     style: TextStyle(
-      fontFamily: 'Montserrat',
       color: Colors.black,
-      fontSize: 12.0,
+      fontSize: 12.5,
       fontWeight: FontWeight.w600
     ),
   );
