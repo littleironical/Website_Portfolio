@@ -147,50 +147,86 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
 
                 // MAIN BODY OF THE WEBSITE...BELOW
 
-                Row(
-                  children: <Widget>[
-                    Column(
-                      children: <Widget>[
-                        Column(
-                          children: <Widget>[
-                            Text('01 - HELLO'),
-                            Text('MY NAME\'S HARLEY MORGAN')
-                          ],
-                        ),
-                        Text('Tell about\nthe difficulties\nand find a solution.'),
-                        Text('Everyone has answers to his questions. No other people\'s\nadvice and experience is needed. The main thing is to hear\n yourself.'),
-                        Text('Take the first step to harmony with yourself'),
-                        Row(
-                          children: <Widget>[
-                            Container(
-                              width: 140.0,
-                              height: 35.0,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.all(Radius.circular(3.0)),
-                                color: Color(0xFF3b5998)
-                              ),
-                              child: Text('Write to Me',
+                Padding(
+                  padding: EdgeInsets.only(left: width*1/10, right: width*1/10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text('01 - HELLO',
                                 style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 13.0,
+                                  color: Colors.black,
+                                  fontSize: 10.0,
                                 ),
                               ),
+                              Text('MY NAME\'S HARLEY MORGAN',
+                                style: TextStyle(
+                                  color: Colors.black54,
+                                  fontSize: 10.0,
+                                ),
+                              )
+                            ],
+                          ),
+                          Text('Tell about\nthe difficulties\nand find a solution.',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 20.0,
                             ),
-                            Text('or'),
-                            Column(
-                              children: <Widget>[
-                                Text('Call My Phone'),
-                                Text('+ 1 (232) 123-4567')
-                              ],
+                          ),
+                          Text('Everyone has answers to his questions. No other people\'s\nadvice and experience is needed. The main thing is to hear\n yourself.',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 15.0,
                             ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    Container(
-                      
-                    ),
-                  ],
+                          ),
+                          Text('Take the first step to harmony with yourself',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 10.0,
+                            ),
+                          ),
+                          Row(
+                            children: <Widget>[
+                              Container(
+                                width: 140.0,
+                                height: 35.0,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.all(Radius.circular(3.0)),
+                                  color: Color(0xFF3b5998)
+                                ),
+                                child: Text('Write to Me',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 13.0,
+                                  ),
+                                ),
+                              ),
+                              Text('or'),
+                              Column(
+                                children: <Widget>[
+                                  Text('Call My Phone'),
+                                  Text('+ 1 (232) 123-4567')
+                                ],
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      Container(
+                        height: 200.0,
+                        width: 200.0,
+                        color: Colors.green,
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
