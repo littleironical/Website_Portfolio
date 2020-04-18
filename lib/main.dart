@@ -262,9 +262,25 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
                             bottom: 0.0,
                             left: 0.0,
                             child: Container(
-                              height: 100.0,
+                              height: 60.0,
                               width: 200.0,
-                              color: Colors.black
+                              decoration: BoxDecoration(  
+                                borderRadius: BorderRadius.all(Radius.circular(3.0)),
+                                color: Colors.black,
+                              ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                children: <Widget>[
+                                  Icon(Icons.play_arrow,
+                                    color: Colors.white,
+                                  ),
+                                  Text('Something About Me',
+                                    style: TextStyle(
+                                      color: Colors.white
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           )
                         ],
