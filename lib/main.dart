@@ -187,14 +187,14 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
                               fontWeight: FontWeight.bold
                             ),
                           ),
-                          SizedBox(height: 30.0,),
+                          SizedBox(height: 40.0,),
                           Text('Everyone has answers to his questions. No other people\'s\nadvice and experience is needed. The main thing is to hear\nyourself.',
                             style: TextStyle(
                               color: Colors.black54,
                               fontSize: 15.0,
                             ),
                           ),
-                          SizedBox(height: 40.0,),
+                          SizedBox(height: 60.0,),
                           Text('Take the first step to harmony with yourself',
                             style: TextStyle(
                               color: Colors.black,
@@ -220,25 +220,28 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
                                   ),
                                 ),
                               ),
-                              SizedBox(width: 20.0,),
+                              SizedBox(width: 30.0,),
                               Text('or',
                                 style: TextStyle(
-                                  fontSize: 10.0,
+                                  fontSize: 13.0,
+                                  color: Colors.black54
                                 ),
                               ),
-                              SizedBox(width: 20.0,),
+                              SizedBox(width: 30.0,),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
                                   Text('Call My Phone',
                                     style: TextStyle(
-                                      color: Colors.black54,
+                                      color: Colors.black87,
+                                      fontSize: 13.0
                                     ),
                                   ),
                                   SizedBox(height: 6.0,),
                                   Text('+ 1 (232) 123-4567',
                                     style: TextStyle(
-                                      fontSize: 15.0,
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.bold
                                     ),
                                   ),
                                 ],
@@ -262,21 +265,25 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
                             bottom: 0.0,
                             left: 0.0,
                             child: Container(
-                              height: 60.0,
-                              width: 200.0,
+                              height: 62.0,
+                              width: 180.0,
                               decoration: BoxDecoration(  
                                 borderRadius: BorderRadius.all(Radius.circular(3.0)),
                                 color: Colors.black,
                               ),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
                                   Icon(Icons.play_arrow,
                                     color: Colors.white,
+                                    size: 26.0,
                                   ),
+                                  SizedBox(width: 12.0),
                                   Text('Something About Me',
                                     style: TextStyle(
-                                      color: Colors.white
+                                      color: Colors.white,
+                                      fontSize: 12.0,
+                                      fontWeight: FontWeight.w500
                                     ),
                                   ),
                                 ],
