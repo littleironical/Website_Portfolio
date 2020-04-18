@@ -163,11 +163,11 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
-                              Text('01 - HELLO',
+                              Text('01 -- HELLO',
                                 style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 10.0,
-                                  fontWeight: FontWeight.w500,
+                                  fontWeight: FontWeight.w600,
                                 ),
                               ),
                               SizedBox(height: 7.0,),
@@ -175,11 +175,12 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
                                 style: TextStyle(
                                   color: Colors.black54,
                                   fontSize: 10.0,
+                                  fontWeight: FontWeight.w500
                                 ),
                               )
                             ],
                           ),
-                          SizedBox(height: 50.0,),
+                          SizedBox(height: 45.0,),
                           Text('Tell about\nthe difficulties\nand find a solution.',
                             style: TextStyle(
                               color: Colors.black,
@@ -209,25 +210,25 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
                                 height: 55.0,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.all(Radius.circular(3.0)),
-                                  color: Color(0xFF78AB6E)
+                                  color: Color(0xFF9CB58F)
                                 ),
                                 child: Center(
                                   child: Text('Write to Me',
                                     style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 13.0,
+                                      fontSize: 14.0,
                                     ),
                                   ),
                                 ),
                               ),
-                              SizedBox(width: 30.0,),
+                              SizedBox(width: 35.0,),
                               Text('or',
                                 style: TextStyle(
                                   fontSize: 13.0,
                                   color: Colors.black54
                                 ),
                               ),
-                              SizedBox(width: 30.0,),
+                              SizedBox(width: 35.0,),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
@@ -257,7 +258,7 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
                             height: 550.0,
                             width: 450.0,  
                             decoration: BoxDecoration(  
-                              image: DecorationImage(image: AssetImage('assets/Girl3.jpg'), fit: BoxFit.cover),  
+                              image: DecorationImage(image: AssetImage('assets/Girl5.jpg'), fit: BoxFit.cover),  
                               borderRadius: BorderRadius.all(Radius.circular(3.0)),
                             ),
                           ),
