@@ -157,7 +157,34 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
                             Text('MY NAME\'S HARLEY MORGAN')
                           ],
                         ),
-                        Text('Tell about\nthe difficulties\nand find a solution.')
+                        Text('Tell about\nthe difficulties\nand find a solution.'),
+                        Text('Everyone has answers to his questions. No other people\'s\nadvice and experience is needed. The main thing is to hear\n yourself.'),
+                        Text('Take the first step to harmony with yourself'),
+                        Row(
+                          children: <Widget>[
+                            Container(
+                              width: 140.0,
+                              height: 35.0,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.all(Radius.circular(3.0)),
+                                color: Color(0xFF3b5998)
+                              ),
+                              child: Text('Write to Me',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 13.0,
+                                ),
+                              ),
+                            ),
+                            Text('or'),
+                            Column(
+                              children: <Widget>[
+                                Text('Call My Phone'),
+                                Text('+ 1 (232) 123-4567')
+                              ],
+                            ),
+                          ],
+                        ),
                       ],
                     ),
                   ],
