@@ -60,7 +60,7 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
             child: Column(
               children: <Widget>[
                 Container(
-                  height: 70.0,
+                  height: 80.0,
                   child: Padding(
                     padding: EdgeInsets.only(left: width*1/10, right: width*1/10),
                     child: Row(
@@ -106,7 +106,7 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
                                 indicatorColor: Colors.black,
                                 indicatorSize: TabBarIndicatorSize.label,
                                 tabs: <Widget>[
-                                  Tab(child: textintabs('Name'),),
+                                  Tab(child: textintabs('Home'),),
                                   Tab(child: textintabs('About Me'),),
                                   Tab(child: textintabs('What I Work With'),),
                                   Tab(child: textintabs('Consultation Format'),),
@@ -144,13 +144,14 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
                   ),
                 ),
                 Divider(indent: width*1/20, endIndent: width*1/20, color: Colors.black12, thickness: 1.0,),
+                SizedBox(height: 50.0),
 
                 // MAIN BODY OF THE WEBSITE...BELOW
 
                 Padding(
                   padding: EdgeInsets.only(left: width*1/10, right: width*1/10),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       Column(
@@ -175,24 +176,29 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
                               )
                             ],
                           ),
+                          SizedBox(height: 50.0,),
                           Text('Tell about\nthe difficulties\nand find a solution.',
                             style: TextStyle(
                               color: Colors.black,
-                              fontSize: 20.0,
+                              fontSize: 50.0,
+                              fontWeight: FontWeight.bold
                             ),
                           ),
-                          Text('Everyone has answers to his questions. No other people\'s\nadvice and experience is needed. The main thing is to hear\n yourself.',
+                          SizedBox(height: 30.0,),
+                          Text('Everyone has answers to his questions. No other people\'s\nadvice and experience is needed. The main thing is to hear\nyourself.',
                             style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 15.0,
+                              color: Colors.black54,
+                              fontSize: 18.0,
                             ),
                           ),
+                          SizedBox(height: 40.0,),
                           Text('Take the first step to harmony with yourself',
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 10.0,
                             ),
                           ),
+                          SizedBox(height: 20.0,),
                           Row(
                             children: <Widget>[
                               Container(
@@ -202,10 +208,12 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
                                   borderRadius: BorderRadius.all(Radius.circular(3.0)),
                                   color: Color(0xFF3b5998)
                                 ),
-                                child: Text('Write to Me',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 13.0,
+                                child: Center(
+                                  child: Text('Write to Me',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 13.0,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -221,9 +229,11 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
                         ],
                       ),
                       Container(
-                        height: 200.0,
-                        width: 200.0,
-                        color: Colors.green,
+                        height: 550.0,
+                        width: 450.0,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(image: AssetImage('assets/Girl3.jpg'), fit: BoxFit.cover)
+                        ),
                       ),
                     ],
                   ),
