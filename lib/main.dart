@@ -94,9 +94,9 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
                         // ResponsiveWidget.isSmallScreen(context) ?
                         // Image.network('assets/menu.png', width: 25, height: 25.0) :
                         Container(
-                          width: 0.5*width,
+                          width: 0.55*width,
                           child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            mainAxisAlignment: MainAxisAlignment.end,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
                               TabBar(
@@ -113,9 +113,10 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
                                   Tab(child: textintabs('Contacts'),),
                                 ],
                               ),
+                              SizedBox(width: 30.0),
                               Container(
                                 width: 140.0,
-                                height: 35.0,
+                                height: 40.0,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.all(Radius.circular(3.0)),
                                   color: Color(0xFF3b5998)
@@ -151,7 +152,7 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
                 Padding(
                   padding: EdgeInsets.only(left: width*1/10, right: width*1/10),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       Column(
@@ -190,14 +191,14 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
                           Text('Everyone has answers to his questions. No other people\'s\nadvice and experience is needed. The main thing is to hear\nyourself.',
                             style: TextStyle(
                               color: Colors.black54,
-                              fontSize: 16.0,
+                              fontSize: 15.0,
                             ),
                           ),
                           SizedBox(height: 40.0,),
                           Text('Take the first step to harmony with yourself',
                             style: TextStyle(
                               color: Colors.black,
-                              fontSize: 15.0,
+                              fontSize: 17.0,
                             ),
                           ),
                           SizedBox(height: 30.0,),
@@ -205,7 +206,7 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
                             children: <Widget>[
                               Container(
                                 width: 180.0,
-                                height: 60.0,
+                                height: 55.0,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.all(Radius.circular(3.0)),
                                   color: Color(0xFF78AB6E)
@@ -227,23 +228,46 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin{
                               ),
                               SizedBox(width: 20.0,),
                               Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
-                                  Text('Call My Phone'),
-                                  SizedBox(width: 6.0,),
-                                  Text('+ 1 (232) 123-4567')
+                                  Text('Call My Phone',
+                                    style: TextStyle(
+                                      color: Colors.black54,
+                                    ),
+                                  ),
+                                  SizedBox(height: 6.0,),
+                                  Text('+ 1 (232) 123-4567',
+                                    style: TextStyle(
+                                      fontSize: 15.0,
+                                    ),
+                                  ),
                                 ],
                               ),
                             ],
                           ),
                         ],
                       ),
-                      Container(
-                        height: 550.0,
-                        width: 450.0,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(image: AssetImage('assets/Girl3.jpg'), fit: BoxFit.cover),
-                          borderRadius: BorderRadius.all(Radius.circular(3.0)),
-                        ),
+                      Stack(
+                        overflow: Overflow.clip,
+                        children: <Widget>[
+                          Container(
+                            height: 550.0,
+                            width: 450.0,  
+                            decoration: BoxDecoration(  
+                              image: DecorationImage(image: AssetImage('assets/Girl3.jpg'), fit: BoxFit.cover),  
+                              borderRadius: BorderRadius.all(Radius.circular(3.0)),
+                            ),
+                          ),
+                          Positioned(
+                            bottom: 0.0,
+                            left: 0.0,
+                            child: Container(
+                              height: 100.0,
+                              width: 200.0,
+                              color: Colors.black
+                            ),
+                          )
+                        ],
                       ),
                     ],
                   ),
