@@ -17,7 +17,6 @@ NOTE: This is not a Responsive website
 
 ## The Output😉
 <img src = "ss1.jpg">
-<img src = "ss1.jpg">
 
 
 ## Design from Dribble😍
